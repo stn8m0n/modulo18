@@ -22,28 +22,27 @@ module.exports = function(grunt){
                     tasks: ['less:development']
                 }
             },
-
             replace: {
                 dev:{
                     options:{
                         patterns:[ //é um array as palavras são os termos que vamos substituir
                             {
                                 match: 'ENDERECO_DO_CSS', //recebe a palavra que o pluggin deve receber
-                                replace: './styles/main.css' // vai apontar para a pasta de acesso final
+                                replacement: './styles/main.css' // vai apontar para a pasta de acesso final
                             }
                         ]
                     },
-                    files:[//array que vai receber
+                    files: [//array que vai receber
                         {
                             expand: true,
                             flatten: true,
                             scr: ['src/index.html'],//arquivo a ser subtituido
                             dest: 'dev/'
-                    }]
+                        }
+                    ]
                 }
             }
-        
-    })
+        })
 
 
 
