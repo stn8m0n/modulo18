@@ -21,6 +21,26 @@ module.exports = function(grunt){
                     files: ['src/styles**/*.less'], /* [** qlqr pasta / * qlqr arquivo] */
                     tasks: ['less:development']
                 }
+            },
+
+            replace: {
+                dev:{
+                    options:{
+                        patterns:[ //é um array as palavras são os termos que vamos substituir
+                            {
+                                match: 'ENDERECO_DO_CSS', //recebe a palavra que o pluggin deve receber
+                                replace: './styles/main.css' // vai apontar para a pasta de acesso final
+                            }
+                        ]
+                    },
+                    files:[//array que vai receber
+                        {
+                            expand: true,
+                            flatten: true,
+                            scr: ['src/index.html'],//arquivo a ser subtituido
+                            dest: 'dev/'
+                    }]
+                }
             }
         
     })
@@ -29,6 +49,7 @@ module.exports = function(grunt){
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-replace');
 
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('build', ['less:production']);
