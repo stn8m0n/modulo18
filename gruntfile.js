@@ -20,7 +20,12 @@ module.exports = function(grunt){
                 less: {
                     files: ['src/styles**/*.less'], /* [** qlqr pasta / * qlqr arquivo] */
                     tasks: ['less:development']
+                },
+                html: {
+                    files: ['src/index.html'],
+                    tasks: ['replace:dev']
                 }
+
             },
             replace: {
                 dev: {
@@ -67,10 +72,11 @@ module.exports = function(grunt){
                         collapseWhitespace: true,
                     },
                     files: {
-                        'prebuild/index.html': 'src/index.html'
+                        'index.html': 'src/index.html'
                     }
                 }
-            }
+            },
+            clean: ['prebuild']
         })
 
 
@@ -79,7 +85,8 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-replace');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['less:production', 'htmlmin:dist', 'replace:dist']);
+    grunt.registerTask('build', ['less:production', 'htmlmin:dist', 'replace:dist', 'clean']);
 }
