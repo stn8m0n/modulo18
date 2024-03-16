@@ -25,7 +25,6 @@ module.exports = function(grunt){
                     files: ['src/index.html'],
                     tasks: ['replace:dev']
                 }
-
             },
             replace: {
                 dev: {
@@ -72,7 +71,7 @@ module.exports = function(grunt){
                         collapseWhitespace: true,
                     },
                     files: {
-                        'index.html': 'src/index.html'
+                        'prebuild/index.html': 'src/index.html'
                     }
                 }
             },
