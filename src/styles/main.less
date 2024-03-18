@@ -1,9 +1,9 @@
 @fontePrincipal: Roboto, sans-serif;
 @fonteDoTitulo: Lobster, cursive;
 @corDoTexto: #fff;
-@corDeFundo: #eb3b5a;
+@corDeFundo: #b30c0cd0;
 @corDoTextoDoBotao:#000;
-@corDoFundoDoBotao:#f7b731;
+@corDoFundoDoBotao:#f7b231d0;
 
 body{
     background-color: @corDeFundo;
@@ -11,9 +11,13 @@ body{
     color: @corDoTexto;
 }
 
-h1{
+h1,h2{
     font-family: @fonteDoTitulo;
     font-size: 3em;
+}
+
+h2{
+    font-size: 2em;
 }
 
 main{
@@ -22,6 +26,10 @@ main{
     margin: 0 auto; // para centralizar na horizontal
     font-size: 2em;
     text-align: center;
+
+    li{
+        font-family: @fontePrincipal;
+    }
 }
 
 button{

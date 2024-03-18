@@ -1,11 +1,15 @@
 body {
-  background-color: #eb3b5a;
+  background-color: #b30c0cd0;
   font-family: Roboto, sans-serif;
   color: #fff;
 }
-h1 {
+h1,
+h2 {
   font-family: Lobster, cursive;
   font-size: 3em;
+}
+h2 {
+  font-size: 2em;
 }
 main {
   max-width: 960px;
@@ -14,6 +18,9 @@ main {
   font-size: 2em;
   text-align: center;
 }
+.semana {
+  font-family: Lobster;
+}
 button {
   padding: 16px;
   cursor: pointer;
@@ -21,7 +28,7 @@ button {
   font-size: 1em;
   margin-top: 16px;
   border-radius: 8px;
-  background-color: #f7b731;
+  background-color: #f7b231d0;
   color: #000;
   font-family: Roboto, sans-serif;
 }

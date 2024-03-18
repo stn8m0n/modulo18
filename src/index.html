@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorteador</title>
+    <title>Grunt</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="@@ENDERECO_DO_CSS">
+    <link rel="stylesheet" href="@@ENDERECO_DO_CSS"> <!--/dev/styles/main.css = @@ENDERECO_DO_CSS-->
 </head>
 <body>
     <main>
-        <h1>Sorteador</h1>
+        <h1>Grunt-Exercicio</h1>
         <form id="form-sorteador">
+            <h2>Dia de Faxina</h2>
             <div>
-                <label for="numero-maximo">Número Máximo</label>
-                <input type="number"id="numero-maximo" required min="2" value="2" step="1">
+                <!--<label for="numero-maximo">Dia da Faxina Semanal</label>-->
+                <label for="numero-maximo"> Escolha entre um semana de 7 dias ou 5 retirando os feriados </label>
+                <input type="number"id="numero-maximo" required min="1" max="7" value="1" step="1">
             </div>
             <button type="submit">Sortear número</button>
             <div class="resultado">
-                O número sorteado de hoje foi: <span id="resultado-valor"></span>
+                O dia da semana sorteado foi: <span id="resultado-valor"></span>
+            </div>
+            <div class="semana">
+                <ol class="dias">
+                    <li>Domingo</li>
+                    <li>Segunda-feira</li>
+                    <li>Terça-feira</li>
+                    <li>Quarta-feira</li>
+                    <li>Quinta-feira</li>
+                    <li>Sexta-feira</li>
+                    <li>Sábado</li>
+                </ol>
             </div>
         </form>
     </main>
